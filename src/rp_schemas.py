@@ -12,7 +12,7 @@ INPUT_SCHEMA = {
         'type': list,
         'required': False,
         'default': [],
-    }.
+    },
     'height': {
         'type': int,
         'required': False,
