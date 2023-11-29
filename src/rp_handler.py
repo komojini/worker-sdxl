@@ -63,7 +63,7 @@ class ModelHandler:
     def load_loras(self, loras):
         adapter_names = []
         adapter_weights = []
-        for lora in loras
+        for lora in loras:
             self.base.load_lora_weights(
                 lora['extarcted_path'],
                 adapter_name=lora['lora_id'],
