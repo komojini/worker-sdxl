@@ -8,6 +8,11 @@ INPUT_SCHEMA = {
         'required': False,
         'default': None
     },
+    'loras': {
+        'type': list,
+        'required': False,
+        'default': [],
+    }.
     'height': {
         'type': int,
         'required': False,
@@ -59,4 +64,22 @@ INPUT_SCHEMA = {
         'default': 1,
         'constraints': lambda img_count: 3 > img_count > 0
     }
+}
+
+LORA_SCHEMA = {
+    'lora_id': {
+        # custom lora id or huggingface lora id
+        'type': str,
+        'required': True,
+    },
+    'url': {
+        # if 'lora_id' is not huggingface lora id, this is required
+        'type': str,
+        'required': False,
+    },
+    'adapter_weight': {
+        'type': float,
+        'required': False,
+        'default': 1.0
+    },
 }
